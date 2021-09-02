@@ -4,12 +4,12 @@ jobs:
   test_project:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
       - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
       - run: pip install -r requirements.txt
       - run: pytest . || true
-      - uses: actions/setup-python@v2
-      - uses: nyakaz73/heroku-django-deploy@v0.68 
+      - name: Checkout
+        uses: nyakaz73/heroku-django-deploy@v0.68 
         with: 
            heroku_app_name : ${{ secrets.HEROKU_APP_NAME }}
            heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
