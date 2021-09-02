@@ -3,7 +3,6 @@ attrs==21.2.0
 Django==3.2.7
 Faker==8.12.1
 iniconfig==1.1.1
-mixer==7.1.2
 packaging==21.0
 pluggy==1.0.0
 py==1.10.0
