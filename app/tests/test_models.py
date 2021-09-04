@@ -10,6 +10,6 @@ def test_article_create():
     title="Simple article",
     content="The article's content",
     )
-    assert article.author_name=="Muhammed Al"
+    assert article.author_name=="Muhammed Ali"
     assert article.title=="Simple article"
     assert article.content=="The article's content"
